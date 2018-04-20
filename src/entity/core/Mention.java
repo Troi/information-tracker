@@ -19,4 +19,9 @@ public class Mention extends Statement {
     public MediaStatement getPointing() {
         return pointing;
     }
+
+    @Override
+    public String toString() {
+        return this.mentioned.getName() + " was mentioned in " + this.pointing.getUrl();
+    }
 }

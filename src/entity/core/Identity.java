@@ -14,4 +14,9 @@ public class Identity extends Statement {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String toString() {
+        return "There is person " + this.getName();
+    }
 }

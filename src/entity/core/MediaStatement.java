@@ -19,4 +19,14 @@ public class MediaStatement extends Statement {
     public Identity getPublisher() {
         return publisher;
     }
+
+
+    @Override
+    public String toString() {
+        if (this.publisher != null) {
+            return "There is " + this.url + " published by " + this.publisher.getName();
+        } else {
+            return "There is " + this.url + " by uknown";
+        }
+    }
 }

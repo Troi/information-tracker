@@ -24,4 +24,14 @@ public abstract class Statement {
     public MediaStatement getProof() {
         return proof;
     }
+
+    public String getCLIFormated() {
+        if (this.creator != null) {
+            return this.creator.getName() + " " + this.creation.toString() + " claims: " + this.toString();
+        } else {
+            return "Admin of this site " + this.creation.toString() + " claims: " + this.toString();
+        }
+    }
+
+    public abstract String toString();
 }
